@@ -7,6 +7,7 @@ package logic;
 public class Patient {
     String name;
     int age;
+    private Sex gender;
     void superCoder (){
         System.out.println("I am Supercoder!!!!!!!!!!!!!!!!");
     }
