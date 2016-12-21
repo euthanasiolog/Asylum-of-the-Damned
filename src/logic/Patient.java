@@ -1,14 +1,21 @@
 package logic;
 
+import java.time.LocalDate;
+
 /**
- * Created by Piatrok on 19.12.2016.
  * в этом классе описываем пациента, как нетрудно догадаться
  */
 public class Patient {
-    String name;
-    int age;
-    private Sex gender;
-    void superCoder (){
-        System.out.println("I am Supercoder!!!!!!!!!!!!!!!!");
-    }
+    private String name; //имя
+    private String surName; // фамилия
+    private String patronymic; // отчество
+    private String address;
+    private LocalDate birthday;
+    private int age; // высчитывается из даты рождения
+    private Sex gender; // пол
+    private LocalDate hospitalizationDate; // с какого числа лежит
+    private String diagnosis; // диагноз (пока просто строка)
+    private boolean isHospitalized; // true - госпитализирован, false - дома
+    private int ward; // палата
+
 }
