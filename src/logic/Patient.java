@@ -19,6 +19,8 @@ public abstract class Patient implements Sick{
     protected boolean isHospitalized; // true - госпитализирован, false - дома
     protected int ward; // палата (можно также добавить отделение)
     protected List<Hospitalisation> hospitalisationList; // список госпитализаций больного
+    protected List<Drug> drugs;
+    protected List<Procedure> procedures;
 
     @Override
     public String toString() {
