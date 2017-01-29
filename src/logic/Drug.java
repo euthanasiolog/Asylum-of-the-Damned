@@ -6,20 +6,20 @@ import java.time.LocalDate;
  * Created by plizz on 22.12.2016.
  */
 public class Drug {
-    LocalDate appointDate = LocalDate.now();// дата назначения лекарства
+    LocalDate appointDrugDate = LocalDate.now();// дата назначения лекарства
     String drugName;
     String drugClass;
     double drugDose; // доза, вообще она в граммах, думаю, тут такое есть? а так х/з
-    LocalDate offDrugDate; //дата отмены лекарства
+    LocalDate cancellationDrugDate; //дата отмены лекарства
     //чел, надо еще время приема замутить - обычно мы часы приема указываем(9, 15, 21, например),
     // подумай, как это замутить
 
-    public LocalDate setOffDrugDate(LocalDate offDrugDate) {
-        this.offDrugDate = offDrugDate;
-        return offDrugDate;
+
+    private void setCancellationDrugDate(LocalDate cancellationDrugDate) {
+        this.cancellationDrugDate = cancellationDrugDate;
     }
 
-    public void offDrug (){
-        offDrugDate = setOffDrugDate(LocalDate.now());
+    public void cancellationOfDrug (){
+        setCancellationDrugDate(LocalDate.now());
     }
 }

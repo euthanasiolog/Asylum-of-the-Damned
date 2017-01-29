@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * Класс псих
  */
-public class Psycho extends Patient implements Sick {
+public class Psycho extends Patient {
 
      public Psycho(String name, String surName, String patronymic,
      String address, LocalDate birthday, Sex gender, String diagnosis) {
@@ -31,15 +31,10 @@ public class Psycho extends Patient implements Sick {
     public void hospitalize(LocalDate date, String diagnosis) {
         if (!isHospitalized) {
             isHospitalized = true;
-            this.diagnosis = diagnosis;
-            this.hospitalizationDate = date;
+
         }
     }
 
-    public void appointDrug (){
-        Drug drug = new Drug();
-        drugList.add(drug);
-    }
 
 
 
@@ -60,12 +55,19 @@ public class Psycho extends Patient implements Sick {
 
     @Override
     public void appointDrug(String drugName) {
-
+        Drug drug = new Drug();
+        drugList.add(drug);
     }
 
     @Override
     public void appointProcedure(String procedureName) {
 
+    }
+
+    @Override
+    public void appointConsultation(String specialistName) {
+        Consultation consultation = new Consultation();
+        consultationList.add(consultation);
     }
 
     @Override

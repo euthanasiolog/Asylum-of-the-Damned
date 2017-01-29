@@ -7,7 +7,8 @@ import java.util.ArrayList;
  *
  */
 public class Asylum {
-private ArrayList<Psycho> allPsyho = new ArrayList<Psycho>();// список вообще всех психов. оченя секретно, поэтому доступ приват
+private ArrayList<Psycho> allPsyho = new ArrayList<Psycho>();// список вообще всех психов, оттуда будем сливать в БД.
+                                                            // оченя секретно, поэтому доступ приват
     public static void main(String[]args) {
         Psycho p = new Psycho("Петров", "Денис", "Валерьевич",
                 "Минск", LocalDate.of(1989, 9, 5), Sex.MALE,

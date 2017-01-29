@@ -10,4 +10,5 @@ public interface Sick {
     void discharge(LocalDate date); // выписать
     void appointDrug(String drugName); //назначить лекарства
     void appointProcedure(String procedureName); // назначить процедуры
+    void appointConsultation(String specialistName);
 }
