@@ -1,6 +1,7 @@
 package logic;
 
 import java.time.LocalDate;
+import java.util.Scanner;
 
 /**
  * Created by User on 31.01.2017.

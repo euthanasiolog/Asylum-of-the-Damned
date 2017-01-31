@@ -21,6 +21,7 @@ public class Psycho extends Patient {
      this.drugList = new ArrayList<Drug>();
      this.procedureList = new ArrayList<Procedure>();
      this.consultationList = new ArrayList<Consultation>();
+     this.hospitalizationDate = LocalDate.now();
      }
      /**
      * Кладем человека в больницу (проверка: не лежит ли уже там)
