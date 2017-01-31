@@ -2,5 +2,6 @@ package logic;
 
 public enum Sex {
     MALE,
-    FEMALE
+    FEMALE,
+    ALL
 }

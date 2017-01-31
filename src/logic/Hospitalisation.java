@@ -10,7 +10,6 @@ public class Hospitalisation {
     private LocalDate from;
     private LocalDate to;
     private String diagnosis;
-
     public Hospitalisation(LocalDate from, LocalDate to, String diagnosis) {
         this.from = from;
         this.to = to;

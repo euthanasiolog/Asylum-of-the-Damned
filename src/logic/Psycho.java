@@ -35,7 +35,9 @@ public class Psycho extends Patient {
         }
     }
 
-
+    public Sex getPatientSex (){
+        return gender;
+    }
 
 
     /**

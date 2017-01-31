@@ -2,23 +2,24 @@ package logic;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  *
  */
 public class Asylum {
 private ArrayList<Psycho> allPsyho = new ArrayList<Psycho>();// список вообще всех психов, оттуда будем сливать в БД.
-                                                            // оченя секретно, поэтому доступ приват
-    public static void main(String[]args) {
-        Psycho p = new Psycho("Петров", "Денис", "Валерьевич",
-                "Минск", LocalDate.of(1989, 9, 5), Sex.MALE,
-                "дурны з Вялейки");
-        System.out.println(p);
-
-    }
+public ArrayList<Departmen> departmentList;                 // оченя секретно, поэтому доступ приват
     //метод добавки психа в список
     public void addPsyho (Psycho psycho){
         allPsyho.add(psycho);
+    }
+
+    public void hospitalisation (Psycho psycho, Departmen departmen){
+        if (psycho.getPatientSex().equals(departmen.getDepartmentSex())){
+            departmen.hospitalize(psycho);
+            addPsyho(psycho);
+        }
     }
 
 }
