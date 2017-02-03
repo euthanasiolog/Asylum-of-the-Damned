@@ -10,18 +10,21 @@ public class Hospitalisation {
     private LocalDate from;
     private LocalDate to;
     private String diagnosis;
-    public Hospitalisation(LocalDate from, LocalDate to, String diagnosis) {
-        this.from = from;
-        this.to = to;
-        this.diagnosis = diagnosis;
+    private Department department;
+    public Hospitalisation() {
+        this.from = LocalDate.now();
+    }
+
+    public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
     }
 
     public LocalDate getFrom() {
         return from;
-    }
-
-    public void setFrom(LocalDate from) {
-        this.from = from;
     }
 
     public LocalDate getTo() {

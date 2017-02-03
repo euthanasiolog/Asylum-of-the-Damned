@@ -25,14 +25,13 @@ public class Psycho extends Patient {
      }
      /**
      * Кладем человека в больницу (проверка: не лежит ли уже там)
-     * @param date дата поступления
-     * @param diagnosis диагноз
      */
-    @Override
-    public void hospitalize(LocalDate date, String diagnosis) {
+
+    public void createHospitalization() {
         if (!isHospitalized) {
             isHospitalized = true;
-
+            Hospitalisation hospitalisation = new Hospitalisation();
+            hospitalisation.setDiagnosis(diagnosis);
         }
     }
 
@@ -44,16 +43,10 @@ public class Psycho extends Patient {
     /**
      * Выписываем из больницы (проверка: не выписан ли уже)
      * Заносим ходку в список госпитализаций больного
-     * @param dischargeDate
      */
     @Override
-    public void discharge(LocalDate dischargeDate) {
-        if (isHospitalized) {
-            isHospitalized = false;
-            hospitalisationList
-                    .add(new Hospitalisation(hospitalizationDate, dischargeDate, diagnosis));
-            hospitalizationDate = null;
-        }
+    public void discharge(Hospitalisation hospitalisation) {
+        hospitalisation.setTo(LocalDate.now());
     }
 
     @Override

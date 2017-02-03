@@ -5,12 +5,12 @@ import java.util.ArrayList;
 /**
  * Created by User on 28.01.2017.
  */
-public class Departmen {
+public class Department {
     public String departmentName;
     private ArrayList<Psycho> psychoInDepartment;
     private Sex sexOfDepartment;
 
-    public Departmen(String name, Sex sex){
+    public Department(String name, Sex sex){
         psychoInDepartment = new ArrayList<Psycho>();
         sexOfDepartment = sex;
         departmentName = name;
@@ -22,5 +22,6 @@ public class Departmen {
 
     public void hospitalize(Psycho psycho) {
         psychoInDepartment.add(psycho);
+
     }
 }

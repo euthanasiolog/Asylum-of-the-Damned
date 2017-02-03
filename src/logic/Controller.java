@@ -1,7 +1,6 @@
 package logic;
 
 import java.time.LocalDate;
-import java.util.Scanner;
 
 /**
  * Created by User on 31.01.2017.
@@ -13,8 +12,8 @@ public class Controller {
                 "дурны з Вялейки");
         System.out.println(p);
         Asylum asylum = new Asylum();
-        Departmen departmen1 = new Departmen("1", Sex.ALL);
-        asylum.hospitalisation(p, departmen1);
+        Department department1 = new Department("1", Sex.ALL);
+        asylum.hospitalisation(p, department1);
         System.out.println("Прошло успешно!");
     }
 }
