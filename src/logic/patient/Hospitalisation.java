@@ -1,4 +1,6 @@
-package logic;
+package logic.patient;
+
+import logic.clinic.Department;
 
 import java.time.LocalDate;
 

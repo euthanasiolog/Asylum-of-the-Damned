@@ -1,8 +1,12 @@
-package logic;
+package logic.patient;
+
+import logic.enums.Sex;
+import logic.treatment.Consultation;
+import logic.treatment.Drug;
+import logic.treatment.Procedure;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Класс псих
@@ -10,11 +14,11 @@ import java.util.List;
 public class Psycho extends Patient {
 
      public Psycho(String name, String surName, String patronymic,
-     String address, LocalDate birthday, Sex gender, String diagnosis) {
+                   LocalDate birthday, Sex gender, String diagnosis) {
      this.name = name;
      this.surName = surName;
      this.patronymic = patronymic;
-     this.address = address;
+     this.adress = new Adress();
      this.birthday = birthday;
      this.gender = gender;
      this.diagnosis = diagnosis;

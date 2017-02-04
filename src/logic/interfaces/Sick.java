@@ -1,6 +1,6 @@
-package logic;
+package logic.interfaces;
 
-import java.time.LocalDate;
+import logic.patient.Hospitalisation;
 
 /**
  * Интерфейс больной, определяем поведение

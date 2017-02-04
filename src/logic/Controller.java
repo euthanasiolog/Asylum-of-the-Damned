@@ -1,5 +1,10 @@
 package logic;
 
+import logic.clinic.Asylum;
+import logic.clinic.Department;
+import logic.enums.Sex;
+import logic.patient.Psycho;
+
 import java.time.LocalDate;
 
 /**

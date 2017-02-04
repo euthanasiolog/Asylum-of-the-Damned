@@ -1,4 +1,10 @@
-package logic;
+package logic.patient;
+
+import logic.enums.Sex;
+import logic.interfaces.Sick;
+import logic.treatment.Consultation;
+import logic.treatment.Drug;
+import logic.treatment.Procedure;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -7,12 +13,12 @@ import java.util.List;
 /**
  * Абстрактный класс пациент, определяем основные свойства
  */
-public abstract class Patient implements Sick{
+public abstract class Patient implements Sick {
 
     protected String name; //имя
     protected String surName; // фамилия
     protected String patronymic; // отчество
-    protected String address;
+    protected Adress adress;
     protected LocalDate birthday;
     protected Sex gender; // пол
     protected LocalDate hospitalizationDate; // с какого числа лежит
@@ -28,7 +34,7 @@ public abstract class Patient implements Sick{
     public String toString() {
         return "Псих:\n" +
                 surName + " " + name + " " + patronymic + " " + birthday.getYear() + " г. р.\n" +
-                "Адрес: " + address + '\n' +
+                "Адрес: " + adress + '\n' +
                 "Дата поступления: " + hospitalizationDate + "\n" +
                 "Диагноз: " + diagnosis + '\n';
     }

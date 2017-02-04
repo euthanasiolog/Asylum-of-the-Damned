@@ -1,4 +1,7 @@
-package logic;
+package logic.clinic;
+
+import logic.enums.Sex;
+import logic.patient.Psycho;
 
 import java.util.ArrayList;
 
