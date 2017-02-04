@@ -101,9 +101,9 @@ public class Adress {
 
     @Override
     public String toString (){
-        return "Адресс: Страна: "+country+'\n'+
+        return "Страна: "+country+'\n'+
                 "Область(регион): "+region+'\n'+
-                "Город: "+'\n'+city+
-                "улица "+street+"дом "+numberOfHouse+"квартира "+numberOfFlat;
+                "Город: "+city+'\n'+
+                "улица "+street+" дом "+numberOfHouse+" квартира "+numberOfFlat;
     }
 }

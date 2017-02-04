@@ -12,8 +12,8 @@ import java.time.LocalDate;
  */
 public class Controller {
     public static void main(String[]args) {
-        Psycho p = new Psycho("Петров", "Денис", "Валерьевич",
-                "Минск", LocalDate.of(1989, 9, 5), Sex.MALE,
+        Psycho p = new Psycho("Петров", "Денис", "Валерьевич"
+                , LocalDate.of(1989, 9, 5), Sex.MALE,
                 "дурны з Вялейки");
         System.out.println(p);
         Asylum asylum = new Asylum();
